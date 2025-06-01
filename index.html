@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTimer - Advanced Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="app-header">
+            <h1 class="app-title">ProTimer</h1>
+            <p class="app-subtitle">Advanced Stopwatch</p>
+        </div>
+
+        <div class="time-display-container" id="displayContainer">
+            <div class="time-display" id="display">00:00:00</div>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-indicator stopped" id="statusIndicator"></div>
+            <span class="status-text" id="statusText">Ready</span>
+        </div>
+
+        <div class="controls-grid">
+            <button class="btn btn-start" id="startBtn" onclick="startStop()">Start</button>
+            <button class="btn btn-lap" id="lapBtn" onclick="recordLap()" disabled>Lap</button>
+            <button class="btn btn-reset" id="resetBtn" onclick="reset()">Reset</button>
+        </div>
+
+        <div class="lap-section" id="lapSection" style="display: none;">
+            <div class="lap-header">
+                <span>Lap Times</span>
+                <span class="lap-counter" id="lapCounter">0</span>
+            </div>
+            <div class="lap-container" id="lapContainer">
+                <div class="no-laps">No laps recorded yet</div>
+            </div>
+        </div>
+
+        <div class="keyboard-shortcuts">
+            <div class="shortcuts-title">Keyboard Shortcuts</div>
+            <div class="shortcuts-list">
+                <div class="shortcut">
+                    <span class="key">SPACE</span>
+                    <span>Start/Pause</span>
+                </div>
+                <div class="shortcut">
+                    <span class="key">L</span>
+                    <span>Lap</span>
+                </div>
+                <div class="shortcut">
+                    <span class="key">R</span>
+                    <span>Reset</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
